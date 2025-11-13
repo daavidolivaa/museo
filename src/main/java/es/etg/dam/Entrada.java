@@ -1,8 +1,11 @@
 package es.etg.dam;
 
-public class Entrada extends Thread {
+import lombok.AllArgsConstructor;
 
-    private int sala;
+@AllArgsConstructor
+public class Entrada implements Runnable {
+
+    private Sala sala;
 
     @Override
     public void run() {

@@ -1,5 +1,14 @@
 package es.etg.dam;
 
-public class Salida extends Thread {
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
+public class Salida implements Runnable {
+
+    private Sala sala;
+
+    @Override
+    public void run() {
+        sala.decrementar();
+    }
 }
