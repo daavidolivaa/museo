@@ -9,6 +9,8 @@ public class Entrada implements Runnable {
 
     @Override
     public void run() {
-        sala.incrementar();
+        synchronized (sala) {
+            sala.incrementar();
+        }
     }
 }

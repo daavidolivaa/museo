@@ -9,6 +9,8 @@ public class Salida implements Runnable {
 
     @Override
     public void run() {
-        sala.decrementar();
+        synchronized (sala) {
+            sala.decrementar();
+        }
     }
 }

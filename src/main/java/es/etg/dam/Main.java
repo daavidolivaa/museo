@@ -6,12 +6,12 @@ public class Main {
 
         Sala sala = new Sala(100);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
             Thread entrada = new Thread(new Entrada(sala));
             entrada.start();
         }
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 1000; i++) {
             Thread salida = new Thread(new Salida(sala));
             salida.start();
         }
